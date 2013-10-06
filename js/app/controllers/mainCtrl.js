@@ -1,6 +1,7 @@
 app.controller("MainCtrl", function($scope, $http, $timeout){
 
 	$scope.pictures = []; 
+	$scope.filtertext = null;
 
 
 	$http.get('http://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=?').success(function(data){

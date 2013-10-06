@@ -9,9 +9,9 @@
 	<body>
 		<div id="content">	
 			<div class="container" ng-controller="MainCtrl">
-				<input id="filterPhotos" placeholder="Search for pictures..."> 
+				<input id="filterPhotos" placeholder="Search for pictures..." ng-model="filterText"> 
 				<div id="photoList">
-					<section class="photo" ng-repeat="p in pictures.items">		
+					<section class="photo" ng-repeat="p in pictures.items | filter: filterText">		
 						<div class="image">
 							<img src="{{ p.media.m }}">
 						</div>				
