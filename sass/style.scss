@@ -1,0 +1,94 @@
+@import "compass/reset";
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+body{
+	font-family: 'Oxygen', sans-serif;
+	color: #2f2f2f;
+	background-color: #2f2f2f;
+}
+*::-webkit-input-placeholder {
+  	color: #5f5f5f;
+}
+
+*:-moz-placeholder {
+  	color: #5f5f5f;
+}
+
+*:-ms-input-placeholder { /* IE10+ */
+  	color: #5f5f5f;
+}
+
+#content{
+	.container{
+		max-width: 960px;
+		margin: 0 auto;	
+
+		#filterPhotos{
+			font-family: 'Oxygen', sans-serif;
+			width: 950px;
+			border-style: none;
+			margin: 10px 0;
+			border-radius: 3px;
+			font-size: 2em;
+			background-color: #9f9f9f;
+			padding-left: 10px;
+
+
+
+		}
+
+		#photoList{
+			margin-bottom: 30px;
+			.photo{
+				width: 950px;
+				height: 160px;
+				background-color:#eba538;
+				margin-top: 3px;
+				border-radius: 3px;
+				padding: 5px;
+				
+				.image{
+					height: 160px;
+					width: 240px;
+					overflow: hidden;
+					float:left;
+					margin-right: 10px;
+
+					img{
+						width: 120%;
+						height: auto;
+
+					}
+				}
+				
+				.photodata{
+					.title{
+						font-size: 1.8em;
+						margin-top: 10px;
+						text-overflow: ellipsis;
+						white-space: no-wrap;
+						
+
+					}
+					.links{
+						margin-top: 20px;	
+
+						a{
+							color: #d94d4d;
+						}
+
+					}
+					.links *{
+						float: left;
+						margin-right: 10px;
+						text-decoration: none;
+					}
+										
+				}
+			}
+		}
+	}	
+
+}
+

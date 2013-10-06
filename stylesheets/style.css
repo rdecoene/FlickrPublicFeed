@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+/* line 17, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Users/rdecoene/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/style.scss */
+body {
+  font-family: 'Oxygen', sans-serif;
+  color: #2f2f2f;
+  background-color: #2f2f2f;
+}
+
+/* line 10, ../sass/style.scss */
+*::-webkit-input-placeholder {
+  color: #5f5f5f;
+}
+
+/* line 14, ../sass/style.scss */
+*:-moz-placeholder {
+  color: #5f5f5f;
+}
+
+/* line 18, ../sass/style.scss */
+*:-ms-input-placeholder {
+  /* IE10+ */
+  color: #5f5f5f;
+}
+
+/* line 23, ../sass/style.scss */
+#content .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 27, ../sass/style.scss */
+#content .container #filterPhotos {
+  font-family: 'Oxygen', sans-serif;
+  width: 950px;
+  border-style: none;
+  margin: 10px 0;
+  border-radius: 3px;
+  font-size: 2em;
+  background-color: #9f9f9f;
+  padding-left: 10px;
+}
+/* line 41, ../sass/style.scss */
+#content .container #photoList {
+  margin-bottom: 30px;
+}
+/* line 43, ../sass/style.scss */
+#content .container #photoList .photo {
+  width: 950px;
+  height: 160px;
+  background-color: #eba538;
+  margin-top: 3px;
+  border-radius: 3px;
+  padding: 5px;
+}
+/* line 51, ../sass/style.scss */
+#content .container #photoList .photo .image {
+  height: 160px;
+  width: 240px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+/* line 58, ../sass/style.scss */
+#content .container #photoList .photo .image img {
+  width: 120%;
+  height: auto;
+}
+/* line 66, ../sass/style.scss */
+#content .container #photoList .photo .photodata .title {
+  font-size: 1.8em;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+}
+/* line 74, ../sass/style.scss */
+#content .container #photoList .photo .photodata .links {
+  margin-top: 20px;
+}
+/* line 77, ../sass/style.scss */
+#content .container #photoList .photo .photodata .links a {
+  color: #d94d4d;
+}
+/* line 82, ../sass/style.scss */
+#content .container #photoList .photo .photodata .links * {
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html ng-app="FlickrFeed">
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title></title>
+			<link rel="stylesheet" href="stylesheets/style.css">
+	</head>
+	<body>
+		<div id="content">	
+			<div class="container" ng-controller="MainCtrl">
+				<input id="filterPhotos" placeholder="Search for pictures..."> 
+				<div id="photoList">
+					<section class="photo" ng-repeat="p in pictures.items">		
+						<div class="image">
+							<img src="{{ p.media.m }}">
+						</div>				
+						<div class="photodata">
+							<h2 class="title">{{ p.title }}</h2>
+							<div class="links">
+								<a href="" title="Author">{{ p.author }}</a>
+								<p>Published on 8th April 2013 at 22:00</p>
+								<a href="{{ p.link }}" title="Link to Flickr" target="_blank">View on Flickr</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+		<script src="js/app/app.js"></script>
+		<script src="js/app/controllers/mainCtrl.js"></script>
+	</body>
+</html>
