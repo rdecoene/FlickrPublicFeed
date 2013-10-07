@@ -12,7 +12,8 @@ app.controller("MainCtrl", function($scope, $http, $timeout){
 		//Clean up data
 		angular.forEach(data.items, function(value, index) {
 			value.author = value.author.substring(19, value.author.length - 1); //Removing nobody@flickr.com
-
+			var splittedLink = value.link.split('/'); //Split link to remove photo ID
+			value.authorLink = splittedLink[0] + '//' + splittedLink[2] + '/' + splittedLink[3] + '/' + splittedLink[4];
 			/*date & time*/
 			//Splitting up "yyyy-mm-ddThh-mm-ssZ"
 			value.year = value.published.substring(0,4);
@@ -62,7 +63,6 @@ app.controller("MainCtrl", function($scope, $http, $timeout){
 
 
 			}
-			console.log('y' + value.hour);
 		});
 
 		console.log(data);

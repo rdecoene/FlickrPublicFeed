@@ -20,7 +20,7 @@
 								<h2>{{ p.title }}</h2>
 							</div>
 							<div class="links">
-								<a href="" title="Author">{{ p.author }}</a>
+								<a href="{{ p.authorLink }}" title="Author" target="_blank">{{ p.author }}</a>
 								<p>Published on {{ p.day }} {{ p.month }} {{ p.year }} at {{ p.hour }}:{{ p.minutes }}</p>
 								<a href="{{ p.link }}" title="Link to Flickr" target="_blank">View on Flickr</a>
 							</div>
