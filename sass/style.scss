@@ -95,4 +95,53 @@ body{
 	}	
 
 }
+@media only screen and (max-width: 960px) {
+	#content{
+	.container{
+		width: 100%;
+		
+		#filterPhotos{
+			width: 95%;
+			margin: 10px;
+		}
 
+		#photoList{
+			.photo{
+				width: 95%;
+				margin: 10px;
+				
+				.image{
+					
+					img{
+					
+					}
+				}
+				
+				.photodata{
+					.title{
+						width: 95%;
+
+						h2{
+
+						}
+
+					}
+					.links{
+						
+
+						a{
+						
+						}
+
+					}
+					.links *{
+						
+					}
+										
+				}
+			}
+		}
+	}	
+
+}
+}
