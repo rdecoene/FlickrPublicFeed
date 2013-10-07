@@ -11,7 +11,7 @@
 			<div class="container" ng-controller="MainCtrl">
 				<input id="filterPhotos" placeholder="Search for pictures..." ng-model="filterText"> 
 				<div id="photoList">
-					<section class="photo" ng-repeat="p in pictures.items | filter: filterText">		
+					<section class="photo" ng-repeat="p in pictures.items | tagFilter:filterText:items.tags">		
 						<div class="image">
 							<img src="{{ p.media.m }}">
 						</div>				
@@ -34,5 +34,6 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
 		<script src="js/app/app.js"></script>
 		<script src="js/app/controllers/mainCtrl.js"></script>
+		<script src="js/app/filters/tagFilter.js"></script>
 	</body>
 </html>

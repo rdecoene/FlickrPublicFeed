@@ -15,7 +15,7 @@ app.controller("MainCtrl", function($scope, $http, $timeout){
 			value.author = value.author.substring(19, value.author.length - 1); //Removing nobody@flickr.com
 		});
 
-		//console.log(data);
+		console.log(data);
 		
 		$scope.pictures = data;
 		
