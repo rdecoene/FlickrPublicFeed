@@ -172,28 +172,18 @@ body{
 				
 				.photodata{
 					.title{
-
 						h2{
 							font-size: 0.9em;
 						
 						}
-
 					}
 					.links{
 						font-size: 0.8em;
-						a{
-						
-						}
 						p{
 							@include transition(margin-left .3s false);
 							margin-left: 192px;
 						}
-
-					}
-					.links *{
-						
-					}
-										
+					}				
 				}
 			}
 		}
