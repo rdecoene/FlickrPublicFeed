@@ -1,39 +1,17 @@
 <!DOCTYPE html>
-	<html ng-app="FlickrFeed">
+	<html>
 	<head>
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<title></title>
+			<script src="js/require.js" data-main="js/main"></script>
 			<link rel="stylesheet" href="stylesheets/style.css">
 	</head>
 	<body>
 		<div id="content">	
-			<div class="container" ng-controller="MainCtrl">
-				<input id="filterPhotos" placeholder="Search for tags..." ng-model="filterText"> 
-				<div id="photoList">
-					<section class="photo" ng-repeat="p in pictures.items | tagFilter:filterText:items.tags">		
-						<div class="image">
-							<img src="{{ p.media.m }}">
-						</div>				
-						<div class="photodata">
-							<div class="title">
-								<h2>{{ p.title }}</h2>
-							</div>
-							<div class="links">
-								<a href="{{ p.authorLink }}" title="Author" target="_blank">{{ p.author }}</a>
-								<p>Published on {{ p.day }} {{ p.month }} {{ p.year }} at {{ p.hour }}:{{ p.minutes }}</p>
-								<a href="{{ p.link }}" title="Link to Flickr" target="_blank">View on Flickr</a>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
+			<ng:view></ng:view>
 		</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
-		<script src="js/app/app.js"></script>
-		<script src="js/app/controllers/mainCtrl.js"></script>
-		<script src="js/app/filters/tagFilter.js"></script>
+	
 	</body>
 </html>
