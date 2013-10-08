@@ -25,6 +25,7 @@ body{
 		margin: 0 auto;	
 
 		#filterPhotos{
+			@include transition(width .3s false);
 			font-family: 'Oxygen', sans-serif;
 			width: 950px;
 			border-style: none;
@@ -41,6 +42,7 @@ body{
 		#photoList{
 			margin-bottom: 30px;
 			.photo{
+				@include transition(width .3s false);
 				width: 950px;
 				height: 160px;
 				background-color:#eba538;
@@ -49,6 +51,7 @@ body{
 				padding: 5px;
 				
 				.image{
+					@include transition(width .3s false);
 					height: 160px;
 					width: 240px;
 					overflow: hidden;
@@ -56,6 +59,7 @@ body{
 					margin-right: 10px;
 
 					img{
+						@include transition(width .3s false);
 						width: 120%;
 						height: auto;
 
@@ -64,6 +68,7 @@ body{
 				
 				.photodata{
 					.title{
+						@include transition(width .3s false);
 						font-size: 1.8em;
 						margin-top: 10px;
 						width: 950px;
@@ -87,6 +92,7 @@ body{
 						float: left;
 						margin-right: 10px;
 						text-decoration: none;
+
 					}
 										
 				}
@@ -101,36 +107,86 @@ body{
 		width: 100%;
 		
 		#filterPhotos{
+			@include transition(width .3s false);
 			width: 95%;
 			margin: 10px;
 		}
 
 		#photoList{
 			.photo{
+				@include transition(width .3s false);
 				width: 95%;
 				margin: 10px;
+		
+				.photodata{
+					.title{
+						@include transition(width .3s false);
+						width: 95%;
+					}		
+				}
+			}
+		}
+	}	
+
+}
+}
+@media only screen and (max-width: 800px) {
+	#content{
+		.container{
+			#photoList{
+				.photo{
+					.photodata{
+						.links{
+							a{
+								margin: 40px 0 0 4px;
+							}						
+							p{
+								position: absolute;
+								margin-left: 252px;
+								@include transition(margin-left .3s false);
+							}
+						}									
+					}
+				}
+			}
+		}	
+	}
+}
+@media only screen and (max-width: 580px) {
+	#content{
+		.container{
+
+		#photoList{
+			
+			.photo{
 				
 				.image{
-					
+					@include transition(width .3s false);
+					width: 180px;
+
 					img{
-					
+						@include transition(width .3s false);
+						width: 130%;
 					}
 				}
 				
 				.photodata{
 					.title{
-						width: 95%;
 
 						h2{
-
+							font-size: 0.9em;
+						
 						}
 
 					}
 					.links{
-						
-
+						font-size: 0.8em;
 						a{
 						
+						}
+						p{
+							@include transition(margin-left .3s false);
+							margin-left: 192px;
 						}
 
 					}

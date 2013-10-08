@@ -12,6 +12,10 @@ app.controller("MainCtrl", function($scope, $http, $timeout){
 		//Clean up data
 		angular.forEach(data.items, function(value, index) {
 			value.author = value.author.substring(19, value.author.length - 1); //Removing nobody@flickr.com
+			if (value.author.length > 20) {
+				value.author = value.author.substring(0,18);
+				value.author = value.author + '...';
+			}
 			var splittedLink = value.link.split('/'); //Split link to remove photo ID
 			value.authorLink = splittedLink[0] + '//' + splittedLink[2] + '/' + splittedLink[3] + '/' + splittedLink[4];
 			/*date & time*/
