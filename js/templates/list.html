@@ -3,7 +3,7 @@
 		<div id="photoList">
 			<section class="photo" ng-repeat="p in pictures.items | tagFilter:filterText:items.tags">		
 				<div class="image">
-					<img src="{{ p.media.m }}">
+					<a href="#/detailed/{{ p.id }}"><img src="{{ p.media.m }}"></a>
 				</div>				
 				<div class="photodata">
 					<div class="title">

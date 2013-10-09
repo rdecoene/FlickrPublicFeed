@@ -34,9 +34,6 @@ body{
 			font-size: 2em;
 			background-color: #9f9f9f;
 			padding-left: 10px;
-
-
-
 		}
 
 		#photoList{
@@ -79,6 +76,7 @@ body{
 							overflow: hidden;
 						}
 
+
 					}
 					.links{
 						margin-top: 20px;	
@@ -100,6 +98,79 @@ body{
 		}
 	}	
 
+}
+//DetailedView
+.dcontainer{
+	background-color: #eba538;
+	padding: 20px;
+	border-radius: 3px;
+
+	.dheader{
+		font-size: 4em;
+		float: left;
+		max-width: 90%;
+		
+	}
+	.button{
+		float:right;
+		margin-top: 20px;
+
+		.arrowleft{
+			
+			width: 0; 
+			height: 0; 
+			border-top: 16px solid transparent;
+			border-bottom: 16px solid transparent;
+			border-right:16px solid #2f2f2f ; 
+			float:left;
+
+			
+		}
+		.back{
+			text-decoration: none;
+			p{
+				color: #eba538;
+				background-color: #2f2f2f;
+				width: 40px;
+				height: 21px;
+				margin-left: 16px;
+				padding: 5px;
+				border-radius: 1px;
+				
+			}
+			
+		}	
+	}
+	
+	#dlinks{
+		#flickrLinks{
+			clear: both;
+		}
+		
+	}
+	.photoContent{
+		margin-top: 20px;
+		
+		.dphoto{
+			width: 200px;
+			height: auto;
+			max-height: 300px;
+			overflow: hidden;
+			float: left;
+			margin-right: 20px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.description{
+			display: block;
+
+		}
+		.tags{
+
+		}
+	}
 }
 @media only screen and (max-width: 960px) {
 	#content{

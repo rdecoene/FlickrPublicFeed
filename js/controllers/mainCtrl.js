@@ -1,8 +1,9 @@
 define(['modules/app', 'filters/tagFilter'], function(app){
-	app.controller("MainCtrl", function($scope, $http, $timeout){
+	app.controller("MainCtrl", function($scope, $http, $timeout, sharedProperties){
 
 	$scope.pictures = []; 
 	$scope.filtertext = null;
+	
 
 	$http.get('http://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=?').success(function(data){
 		data = data.replace(/\\'/g, "'"); //Cleaning bad JSON received from Flickr
@@ -26,6 +27,7 @@ define(['modules/app', 'filters/tagFilter'], function(app){
 			value.day = value.published.substring(8,10);
 			value.hour = value.published.substring(11,13);
 			value.minutes = value.published.substring(14,16);
+			value.id = index;
 
 			switch(value.month) //Asigning month to number
 			{
@@ -69,10 +71,9 @@ define(['modules/app', 'filters/tagFilter'], function(app){
 
 			}
 		});
-
 		//console.log(data);
-		
 		$scope.pictures = data;
+		sharedProperties.setpics(data);
 		
 	});
 		

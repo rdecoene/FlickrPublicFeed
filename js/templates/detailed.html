@@ -1,0 +1,22 @@
+<div class="container dcontainer">
+
+	<h1 class="dheader"> {{ detailedPhoto.title }} </h1>
+	<div class="button">
+		<div class="arrowleft"></div>
+		<a href="./" class="back"><p>Back</p></a>
+	</div>
+	<div id="dlinks">
+		<p id="flickrLinks"> {{ detailedPhoto.author }}   |   Published on {{ detailedPhoto.day }} {{ detailedPhoto.month }} {{ detailedPhoto.year }} at {{ detailedPhoto.hour }}:{{ detailedPhoto.minutes }} </p>
+	</div>
+	<div class="photoContent">
+		<div class="dphoto">
+			<img src="{{ detailedPhoto.media.m }}">
+		</div>
+		<div class="description">
+			
+		</div>
+		<div class="tags"><p>Tags: </p>{{ detailedPhoto.tags }}</div>
+	</div>
+
+
+</div>
