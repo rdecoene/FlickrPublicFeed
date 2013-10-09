@@ -1,8 +1,9 @@
 define([
 	'angular', 
-	'angular-resource'
+	'angular-resource',
+	'angular-cookies'
 ], function (angular){
-	return angular.module('FlickrFeed', ['ngResource'])
+	return angular.module('FlickrFeed', ['ngResource', 'ngCookies'])
 				  .service('sharedProperties', function(){
 				  	var pics = [];
 				  	return {

@@ -1,5 +1,5 @@
 define(['modules/app', 'filters/tagFilter'], function(app){
-	app.controller("MainCtrl", function($scope, $http, $timeout, sharedProperties){
+	app.controller("MainCtrl", function($scope, $http, $timeout, $cookies, sharedProperties){
 
 	$scope.pictures = []; 
 	$scope.filtertext = null;
