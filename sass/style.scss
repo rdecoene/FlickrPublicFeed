@@ -104,6 +104,7 @@ body{
 	background-color: #eba538;
 	padding: 20px;
 	border-radius: 3px;
+	margin-top: 20px!important;
 
 	.dheader{
 		font-size: 4em;
@@ -128,6 +129,7 @@ body{
 		}
 		.back{
 			text-decoration: none;
+			margin-bottom: 25px;
 			p{
 				color: #eba538;
 				background-color: #2f2f2f;
@@ -141,10 +143,14 @@ body{
 			
 		}	
 	}
-	
+	.test{
+		clear:both;
+
+	}
 	#dlinks{
+		margin-top: 15px;
 		#flickrLinks{
-			clear: both;
+			
 		}
 		
 	}
@@ -154,7 +160,7 @@ body{
 		.dphoto{
 			width: 200px;
 			height: auto;
-			max-height: 300px;
+			max-height: 230px;
 			overflow: hidden;
 			float: left;
 			margin-right: 20px;
@@ -165,11 +171,20 @@ body{
 		}
 		.description{
 			display: block;
+			display:-ms-flexbox;
+			display:-moz-box;
+			display:-webkit-box;
 
+			a{
+				color: #d94d4d;
+			}
 		}
 		.tags{
-
-		}
+			
+			p{
+				margin-top: 20px;
+			}
+		}	
 	}
 }
 @media only screen and (max-width: 960px) {
