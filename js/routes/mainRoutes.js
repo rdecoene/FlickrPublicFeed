@@ -2,7 +2,7 @@ define(['modules/app' , 'controllers/mainCtrl', 'controllers/detailedCtrl'] , fu
   return app.config(['$routeProvider' , function ($routeProvider) {
     $routeProvider.when('/' , {controller: 'MainCtrl' , templateUrl: 'js/templates/list.html'})
     .when('/detailed/:itemId', {controller: 'DetailedCtrl' , templateUrl: 'js/templates/detailed.html'})
-    .otherwise({redirectTo: '/'});
+    .otherwise({redirectTo: '/'});	//If url not existing, redirect to '/'
   }]);
 
 });

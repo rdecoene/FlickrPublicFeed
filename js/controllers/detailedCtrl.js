@@ -1,19 +1,19 @@
 define(['modules/app'], function(app){
 	app.controller("DetailedCtrl", function($scope, $routeParams, sharedProperties){
-		$scope.detailedId = $routeParams.itemId;
-		$scope.photos = sharedProperties.getpics();
-		$scope.detailedPhoto = $scope.photos.items[$scope.detailedId];
+		$scope.detailedId = $routeParams.itemId;						//get ID of clicked picture
+		$scope.photos = sharedProperties.getpics();						//get pictures from custom service
+		$scope.detailedPhoto = $scope.photos.items[$scope.detailedId];	//get specific picture data
 		
-		//Clean Description
+		//Clean up description
 		var splittedDesc = $scope.detailedPhoto.description.split("</p>");
 		$scope.detailedPhoto.desc = splittedDesc[2];
 		$('.description').append($scope.detailedPhoto.desc);
 		
-		//Empty title
+		//Empty title | if title is empty
 		if ($scope.detailedPhoto.title == "" || $scope.detailedPhoto.title == null){
-			$scope.detailedPhoto.title = "No Title";
+			$scope.detailedPhoto.title = "No Title Available";
 		}
 
-		//console.log(sharedProperties.getpics());
+		
 	});
 });

@@ -1,5 +1,5 @@
 define(['modules/app', 'filters/tagFilter'], function(app){
-	app.controller("MainCtrl", function($scope, $http, $timeout, $cookies, sharedProperties){
+	app.controller("MainCtrl", function($scope, $http, $timeout, sharedProperties){
 
 	$scope.pictures = []; 
 	$scope.filtertext = null;
@@ -20,8 +20,8 @@ define(['modules/app', 'filters/tagFilter'], function(app){
 			}
 			var splittedLink = value.link.split('/'); //Split link to remove photo ID
 			value.authorLink = splittedLink[0] + '//' + splittedLink[2] + '/' + splittedLink[3] + '/' + splittedLink[4];
-			/*date & time*/
-			//Splitting up "yyyy-mm-ddThh-mm-ssZ"
+			
+			//Splitting up "yyyy-mm-ddThh-mm-ssZ" to readable date and time
 			value.year = value.published.substring(0,4);
 			value.month = value.published.substring(5,7);
 			value.day = value.published.substring(8,10);
@@ -71,9 +71,8 @@ define(['modules/app', 'filters/tagFilter'], function(app){
 
 			}
 		});
-		//console.log(data);
 		$scope.pictures = data;
-		sharedProperties.setpics(data);
+		sharedProperties.setpics(data); //Put data in custom service
 		
 	});
 		

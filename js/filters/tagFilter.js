@@ -1,4 +1,5 @@
-define(['modules/app'], function(app){
+//Custom filter to create ability to search for tags
+define(['modules/app'], function(app){      
     app.filter('tagFilter', function() {
       return function(items, filterText, photo) {
         var searchRegx = new RegExp(filterText, "i");
